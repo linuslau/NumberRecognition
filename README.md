@@ -20,12 +20,15 @@
 pip install -r requirements.txt
 python parse_train_images_labels.py
 python parse_t10k_images_labels.py
-python model_training.py
-python model_test.py
+python model_train.py
+python model_inference.py
 ```
 
 
 ## MNIST Digit Recognition with PyTorch
+
+This is a "Hello World" program in the field of artificial intelligence (AI) and deep learning, written for learning purposes.
+
 This repository contains a complete implementation of a neural network for recognizing handwritten digits from the MNIST dataset using PyTorch. The project includes both training and inference scripts, along with utilities for preparing the dataset.
 
 ### Overview
@@ -33,6 +36,8 @@ The project consists of the following scripts:
 
 - model_train.py: This script is responsible for training the neural network model on the MNIST dataset.
 - model_inference.py: This script performs inference using the trained model on a test dataset.
+- parse_train_images_labels.py: Reads and saves the MNIST training images, organized by digit labels.
+- parse_t10k_images_labels.py: Reads and saves the MNIST test labels and images, organized by digit labels.
   
 ### Contents
 #### parse_train_images_labels.py
@@ -311,12 +316,14 @@ test accuracy = 9777 / 10000 = 0.9777000000000000135003119794419
 
 Process finished with exit code 0
 ```
+Program runs with Python 3.11 in my setup.
 
 #### Dependencies
 - PyTorch
 - torchvision
 - PIL (Python Imaging Library)
 - numpy
+
 You can install the required dependencies using pip:
 ```
 pip install torch torchvision pillow numpy
